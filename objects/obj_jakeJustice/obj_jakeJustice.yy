@@ -2,7 +2,7 @@
     "id": "ca53a0be-88fd-4e27-a7b0-60ab8d4ed8e5",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "objJakeJustice",
+    "name": "obj_jakeJustice",
     "eventList": [
         {
             "id": "8774f076-5cdb-430f-82b3-7e83885f76c1",

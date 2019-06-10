@@ -58,8 +58,16 @@
             "Key": "186cd4e1-d477-4977-b188-3f37da3d8c1a",
             "Value": {
                 "id": "4627e0aa-0d5c-4adc-a563-0b23e642910b",
-                "resourcePath": "sprites\\sprJakeJusticeLand\\sprJakeJusticeLand.yy",
+                "resourcePath": "sprites\\spr_jakeJusticeLand\\spr_jakeJusticeLand.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "19a5a3df-c528-416d-878e-c5b8b3fbf2d0",
+            "Value": {
+                "id": "33f06a3e-85eb-4922-8146-7e6fd49bb91e",
+                "resourcePath": "scripts\\scr_collision\\scr_collision.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -106,7 +114,7 @@
             "Key": "440dc134-612d-4551-99c4-78b659e9ce93",
             "Value": {
                 "id": "96a2d7e3-ef3c-40e4-a92d-a696a96517b2",
-                "resourcePath": "sprites\\sprCollision\\sprCollision.yy",
+                "resourcePath": "sprites\\spr_collision\\spr_collision.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -114,7 +122,7 @@
             "Key": "4785e4a4-1a8d-45b8-9c23-bf429ae4c15d",
             "Value": {
                 "id": "dc981b2c-f07c-49de-9d08-d746c10b4146",
-                "resourcePath": "tilesets\\tileCollision\\tileCollision.yy",
+                "resourcePath": "tilesets\\tile_collision\\tile_collision.yy",
                 "resourceType": "GMTileSet"
             }
         },
@@ -130,7 +138,7 @@
             "Key": "5246a75d-ad26-44d0-aa38-a1e1647ea792",
             "Value": {
                 "id": "7e847495-8d63-4c6b-8cb5-9f0023ec6317",
-                "resourcePath": "sprites\\sprJakeJusticeMidAir\\sprJakeJusticeMidAir.yy",
+                "resourcePath": "sprites\\spr_jakeJusticeMidAir\\spr_jakeJusticeMidAir.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -170,7 +178,7 @@
             "Key": "734c24bf-36b4-42e3-89dc-4cff56bc733a",
             "Value": {
                 "id": "83a83c4d-3964-408e-99be-f8ca91f36e10",
-                "resourcePath": "sprites\\sprJakeJusticeIdle\\sprJakeJusticeIdle.yy",
+                "resourcePath": "sprites\\spr_jakeJusticeIdle\\spr_jakeJusticeIdle.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -178,7 +186,7 @@
             "Key": "7b82b287-4d4e-4b71-b948-3353219c459e",
             "Value": {
                 "id": "81ffc719-88e8-4394-89a6-71c8aa028ddc",
-                "resourcePath": "sprites\\sprBackground\\sprBackground.yy",
+                "resourcePath": "sprites\\spr_background\\spr_background.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -186,7 +194,7 @@
             "Key": "7fbfb13e-1040-48a2-8613-185a02c43e7a",
             "Value": {
                 "id": "468c221e-c32b-4a82-b15e-f3ff315abfa7",
-                "resourcePath": "sprites\\sprTileset\\sprTileset.yy",
+                "resourcePath": "sprites\\spr_tileset\\spr_tileset.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -218,7 +226,7 @@
             "Key": "911a87e0-ade5-48c8-81b5-29ff8db1e405",
             "Value": {
                 "id": "3ebcb6a0-33c1-4d58-9c09-1f60cedd17a4",
-                "resourcePath": "sprites\\sprJakeJusticeJump\\sprJakeJusticeJump.yy",
+                "resourcePath": "sprites\\spr_jakeJusticeJump\\spr_jakeJusticeJump.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -234,7 +242,7 @@
             "Key": "b90ca298-e3b5-449e-a10f-ecc61e04aa8d",
             "Value": {
                 "id": "dad5422a-d4bb-4c5a-a5df-e8e3a2e98966",
-                "resourcePath": "sprites\\sprJakeJusticeLedgeGrab\\sprJakeJusticeLedgeGrab.yy",
+                "resourcePath": "sprites\\spr_jakeJusticeLedgeGrab\\spr_jakeJusticeLedgeGrab.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -250,7 +258,7 @@
             "Key": "ca53a0be-88fd-4e27-a7b0-60ab8d4ed8e5",
             "Value": {
                 "id": "e55ba24c-381c-4a96-afcc-2f561406031d",
-                "resourcePath": "objects\\objJakeJustice\\objJakeJustice.yy",
+                "resourcePath": "objects\\obj_jakeJustice\\obj_jakeJustice.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -282,7 +290,7 @@
             "Key": "eedafa12-f633-4e34-b2ab-72b29164aed1",
             "Value": {
                 "id": "f1279c85-24f5-44e4-b428-0f6ff3dae2e8",
-                "resourcePath": "sprites\\sprJakeJusticeRun\\sprJakeJusticeRun.yy",
+                "resourcePath": "sprites\\spr_jakeJusticeRun\\spr_jakeJusticeRun.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -296,7 +304,7 @@
         }
     ],
     "script_order": [
-        
+        "19a5a3df-c528-416d-878e-c5b8b3fbf2d0"
     ],
     "tutorial": ""
 }
