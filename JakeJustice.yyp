@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "186cd4e1-d477-4977-b188-3f37da3d8c1a",
+            "Value": {
+                "id": "4627e0aa-0d5c-4adc-a563-0b23e642910b",
+                "resourcePath": "sprites\\jakeJusticeLand\\jakeJusticeLand.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "220b17d6-b739-4b80-86e5-d4a9782ade9a",
             "Value": {
                 "id": "ce6a4779-7698-4f88-86b3-6b87d3c251b3",
@@ -103,6 +111,14 @@
             }
         },
         {
+            "Key": "5246a75d-ad26-44d0-aa38-a1e1647ea792",
+            "Value": {
+                "id": "7e847495-8d63-4c6b-8cb5-9f0023ec6317",
+                "resourcePath": "sprites\\jakeJusticeMidAir\\jakeJusticeMidAir.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "567ff4fb-2229-43ab-b511-52b140215231",
             "Value": {
                 "id": "508cdd6b-f3d3-41b4-93e0-4e9508d839ea",
@@ -135,6 +151,14 @@
             }
         },
         {
+            "Key": "734c24bf-36b4-42e3-89dc-4cff56bc733a",
+            "Value": {
+                "id": "83a83c4d-3964-408e-99be-f8ca91f36e10",
+                "resourcePath": "sprites\\jakeJusticeIdle\\jakeJusticeIdle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "83d96d78-b23b-4aaf-a800-1080fa11ffe9",
             "Value": {
                 "id": "3fd1ba60-7b23-44c7-a4e1-31630900e9c4",
@@ -151,11 +175,35 @@
             }
         },
         {
+            "Key": "8fb29eab-13ac-4347-96f1-3a9465f402c5",
+            "Value": {
+                "id": "0675fdac-6a1d-44a0-8398-01041b1bb412",
+                "resourcePath": "views\\8fb29eab-13ac-4347-96f1-3a9465f402c5.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "911a87e0-ade5-48c8-81b5-29ff8db1e405",
+            "Value": {
+                "id": "3ebcb6a0-33c1-4d58-9c09-1f60cedd17a4",
+                "resourcePath": "sprites\\jakeJusticeJump\\jakeJusticeJump.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "9e4bbdf1-65cf-4e2b-b882-ba246d3ac0dd",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "b90ca298-e3b5-449e-a10f-ecc61e04aa8d",
+            "Value": {
+                "id": "dad5422a-d4bb-4c5a-a5df-e8e3a2e98966",
+                "resourcePath": "sprites\\jakeJusticeLedgeGrab\\jakeJusticeLedgeGrab.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -180,6 +228,14 @@
                 "id": "ed21c7db-e72a-43c0-823c-7c7b6771c95c",
                 "resourcePath": "views\\ea3a13bd-9bfa-48e3-a065-6478beed1515.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "eedafa12-f633-4e34-b2ab-72b29164aed1",
+            "Value": {
+                "id": "f1279c85-24f5-44e4-b428-0f6ff3dae2e8",
+                "resourcePath": "sprites\\jakeJusticeRun\\jakeJusticeRun.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
