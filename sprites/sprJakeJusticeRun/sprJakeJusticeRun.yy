@@ -2,7 +2,7 @@
     "id": "eedafa12-f633-4e34-b2ab-72b29164aed1",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "jakeJusticeRun",
+    "name": "sprJakeJusticeRun",
     "For3D": false,
     "HTile": false,
     "VTile": false,

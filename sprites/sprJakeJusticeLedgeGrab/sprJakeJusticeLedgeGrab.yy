@@ -2,7 +2,7 @@
     "id": "b90ca298-e3b5-449e-a10f-ecc61e04aa8d",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "jakeJusticeLedgeGrab",
+    "name": "sprJakeJusticeLedgeGrab",
     "For3D": false,
     "HTile": false,
     "VTile": false,

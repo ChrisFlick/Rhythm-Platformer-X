@@ -2,7 +2,7 @@
     "id": "734c24bf-36b4-42e3-89dc-4cff56bc733a",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "jakeJusticeIdle",
+    "name": "sprJakeJusticeIdle",
     "For3D": false,
     "HTile": false,
     "VTile": false,
