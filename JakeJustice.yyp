@@ -159,6 +159,14 @@
             }
         },
         {
+            "Key": "7fbfb13e-1040-48a2-8613-185a02c43e7a",
+            "Value": {
+                "id": "468c221e-c32b-4a82-b15e-f3ff315abfa7",
+                "resourcePath": "sprites\\tileset\\tileset.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "83d96d78-b23b-4aaf-a800-1080fa11ffe9",
             "Value": {
                 "id": "3fd1ba60-7b23-44c7-a4e1-31630900e9c4",
@@ -204,6 +212,14 @@
                 "id": "dad5422a-d4bb-4c5a-a5df-e8e3a2e98966",
                 "resourcePath": "sprites\\jakeJusticeLedgeGrab\\jakeJusticeLedgeGrab.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "bc9fe3b2-3e56-4db0-a24e-c10da6b80653",
+            "Value": {
+                "id": "a79ed3f8-ccdf-40cf-9b4f-25a536dec0fe",
+                "resourcePath": "tilesets\\tileset0\\tileset0.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
