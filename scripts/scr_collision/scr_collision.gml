@@ -69,9 +69,5 @@ if (bbox_side != -1) { // Check to make sure player is in motion
             verticalStart = y;
             falling = true;
         }
-        
-
-        
-        
     }
 }

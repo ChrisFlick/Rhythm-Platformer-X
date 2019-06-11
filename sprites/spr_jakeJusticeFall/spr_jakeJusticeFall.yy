@@ -2,7 +2,7 @@
     "id": "5246a75d-ad26-44d0-aa38-a1e1647ea792",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "spr_jakeJusticeMidAir",
+    "name": "spr_jakeJusticeFall",
     "For3D": false,
     "HTile": false,
     "VTile": false,

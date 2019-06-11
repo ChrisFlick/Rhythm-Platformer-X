@@ -19,9 +19,11 @@ horizontalTime = 0; // Current step in ease function.
 
 // Vertical easing variables.
 VERTICAL_DURATION = 10; // Duration of ease function.
-JUMP_RATE = 50;
+LAND_DURATION = -3;
+JUMP_RATE = 70;
 MAX_FALL_RATE = 5;
 STARTING_FALL_RATE = 0;
+
 
 verticalChange = -1 // Desired position.
 verticalTime = -1; // Current step in ease function.

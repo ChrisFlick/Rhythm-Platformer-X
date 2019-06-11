@@ -7,9 +7,16 @@ key_left = keyboard_check(ord("A")); // Move left as A is held.
 key_right = keyboard_check(ord("D")); // Move right as D is held.
 key_jump = keyboard_check_pressed(vk_space); // Jump when Space Bar is pressed.
 
+
 /*********************
 ****** Movement ******
 *********************/
+
+// Reset after landing.
+if (verticalStart++ == LAND_DURATION) {
+    verticalStart = -1;
+}
+
 
 // Calculate horizontal movement.
 var movement = key_right - key_left;
@@ -17,7 +24,10 @@ var movement = key_right - key_left;
 if (movement != 0) {
 
     // Change sprite to running + direction.
-    sprite_index = spr_jakeJusticeRun;
+    if (verticalTime = -1) {
+        sprite_index = spr_jakeJusticeRun;
+    }
+    
     if (movement < 0) {
         image_xscale = -1;
     } else {
@@ -34,7 +44,9 @@ if (movement != 0) {
     walkspeed = 0;
 
     // Change sprite to idle.
-    sprite_index = spr_jakeJusticeIdle;
+    if (verticalTime = -1) {
+        sprite_index = spr_jakeJusticeIdle;
+    } 
 }
 
 horizontalSpeed = movement * walkspeed;
@@ -46,6 +58,8 @@ if (key_jump && verticalTime == -1) {
     verticalStart = y;
     verticalChange = -JUMP_RATE;
     verticalTime = 0;
+
+    sprite_index = spr_jakeJusticeJump
 }
 
 // If ease_Function is complete initializing ease_function for falling.
@@ -58,9 +72,7 @@ if (verticalTime == VERTICAL_DURATION) && (!falling) {
 // Else if jumping use ease_function.
 } else if (verticalTime != -1) && (!falling) {
     yPOS = ease_InOutCirc(verticalTime++, verticalStart, verticalChange, VERTICAL_DURATION);
-} 
-
-if (falling) {
+} else if (falling) {
     fallSpeed = ease_InOutCirc(verticalTime++, STARTING_FALL_RATE, MAX_FALL_RATE, VERTICAL_DURATION);
 }
 
@@ -72,6 +84,9 @@ x += horizontalSpeed; // Move player left or right depending on + or - horizonta
 
 if (falling) {
     yPOS += fallSpeed;
+    sprite_index = spr_jakeJusticeFall;
+} else if (verticalStart == -2) {
+    sprite_index = spr_jakeJusticeLand;
 }
 
 y = yPOS; // Move player up or down based on yPOS.
