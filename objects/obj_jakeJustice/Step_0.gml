@@ -13,22 +13,34 @@ key_jump = keyboard_check_pressed(vk_space); // Jump when Space Bar is pressed.
 
 // Calculate horizontal movement.
 var movement = key_right - key_left;
+
+if (movement != 0) {
+    if (horizontalTime < HORIZONTAL_DURATION) {
+        walkspeed = ease_OutExpo(horizontalTime++, STARTING_WALKSPEED, MAX_WALKSPEED, HORIZONTAL_DURATION);
+    } else {
+        horizontalTime = HORIZONTAL_DURATION;
+    }
+} else {
+    horizontalTime = 0;
+    walkspeed = 0;
+}
+
 horizontalSpeed = movement * walkspeed;
 
 // Calculate Verticle movement.
-if (key_jump && time == -1) {
-    start = y;
-    change = -JUMP_RATE;
-    time = 0;
+if (key_jump && verticalTime == -1) {
+    verticalStart = y;
+    verticalChange = -JUMP_RATE;
+    verticalTime = 0;
 }
 
-if (time == DURATION) {
-    time = -1;
-    change = -1;
-    start = -1;
-} else if (time != -1) {
-    yPOS = ease_InOutCirc(time++, start, change, DURATION);
-} else if (time == -1) {
+if (verticalTime == VERTICAL_DURATION) {
+    verticalTime = -1;
+    verticalChange = -1;
+    verticalStart = -1;
+} else if (verticalTime != -1) {
+    yPOS = ease_InOutCirc(verticalTime++, verticalStart, verticalChange, VERTICAL_DURATION);
+} else if (verticalTime == -1) {
     //yPOS += playerGravity;
 }
 

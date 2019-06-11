@@ -263,6 +263,22 @@
             }
         },
         {
+            "Key": "b6e2d7d5-59c1-43b1-8d86-4b5c1cd34695",
+            "Value": {
+                "id": "47b448b4-12ff-486d-abb8-ad4df2694d78",
+                "resourcePath": "scripts\\ease_InOutQuart\\ease_InOutQuart.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b8508ab9-77ac-4c79-9c47-da0975bdd900",
+            "Value": {
+                "id": "52659fa9-30e9-4452-94b7-2406baf7d8cf",
+                "resourcePath": "scripts\\ease_InOutExpo\\ease_InOutExpo.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b90ca298-e3b5-449e-a10f-ecc61e04aa8d",
             "Value": {
                 "id": "dad5422a-d4bb-4c5a-a5df-e8e3a2e98966",
@@ -311,6 +327,14 @@
             }
         },
         {
+            "Key": "ee0db4b5-4241-40a8-b180-fa9cac0f419e",
+            "Value": {
+                "id": "3f8e93b7-6d87-4b23-8559-beb7e490e779",
+                "resourcePath": "scripts\\ease_OutExpo\\ease_OutExpo.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "eedafa12-f633-4e34-b2ab-72b29164aed1",
             "Value": {
                 "id": "f1279c85-24f5-44e4-b428-0f6ff3dae2e8",
@@ -329,7 +353,10 @@
     ],
     "script_order": [
         "19a5a3df-c528-416d-878e-c5b8b3fbf2d0",
-        "60a58e9e-71d4-4119-96ad-5e37d271ea23"
+        "60a58e9e-71d4-4119-96ad-5e37d271ea23",
+        "b6e2d7d5-59c1-43b1-8d86-4b5c1cd34695",
+        "b8508ab9-77ac-4c79-9c47-da0975bdd900",
+        "ee0db4b5-4241-40a8-b180-fa9cac0f419e"
     ],
     "tutorial": ""
 }
