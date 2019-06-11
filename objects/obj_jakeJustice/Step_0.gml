@@ -34,19 +34,29 @@ if (key_jump && verticalTime == -1) {
     verticalTime = 0;
 }
 
-if (verticalTime == VERTICAL_DURATION) {
-    verticalTime = -1;
+if (verticalTime == VERTICAL_DURATION) && (!falling) {
+    verticalTime = 0;
     verticalChange = -1;
-    verticalStart = -1;
-} else if (verticalTime != -1) {
+    verticalStart = y;
+    falling = true;
+} else if (verticalTime != -1) && (!falling) {
     yPOS = ease_InOutCirc(verticalTime++, verticalStart, verticalChange, VERTICAL_DURATION);
-} else if (verticalTime == -1) {
-    //yPOS += playerGravity;
+} 
+
+if (falling) {
+    fallSpeed = ease_InOutCirc(verticalTime++, STARTING_FALL_RATE, MAX_FALL_RATE, VERTICAL_DURATION);
 }
 
 // Check for collision
-//scr_collision(obj_jakeJustice);
+scr_collision(obj_jakeJustice);
 
 
 x += horizontalSpeed; // Move player left or right depending on + or - horizontalSpeed.
-y = yPOS; // Move player up or down based on yPOS.
+
+if (falling) {
+    y += fallSpeed;
+} else {
+    y = yPOS; // Move player up or down based on yPOS.
+}
+    
+    
