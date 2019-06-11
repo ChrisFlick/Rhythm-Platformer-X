@@ -48,18 +48,21 @@ if (bbox_side != -1) { // Check to make sure player is in motion
         var playerHeight = sprite_get_height(player.sprite_index);
 
         if (player.fallSpeed > 0) {
-            //yPOS -= (bbox_bottom mod playerHeight) - (playerHeight - 1) - (bbox_bottom - yPOS);
             yPOS -= sign(player.fallSpeed);
             
         } 
         
-
+        // If falling end ease_function.
         if (player.falling) {
             player.fallSpeed = 0; // Set fallspeed to 0.
             player.falling = false;
-            verticalChange = -1 // Desired position.
-            verticalTime = -1; // Current step in ease function.
-            verticalStart = -1; // Starting position.
+
+            // Set to null.
+            verticalChange = -1 
+            verticalTime = -1; 
+            verticalStart = -1; 
+
+        // Else initialize ease_function for falling.
         } else {
             verticalTime = 0;
             verticalChange = -1;
