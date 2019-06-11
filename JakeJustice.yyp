@@ -159,11 +159,27 @@
             }
         },
         {
+            "Key": "5ae39cd8-cf1c-4d83-b306-d7a2fb6c5ae5",
+            "Value": {
+                "id": "efba016f-b0dd-40ef-b8a3-3b6931b682d3",
+                "resourcePath": "sprites\\spr_sky\\spr_sky.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5be516a7-8b0c-4fa1-b553-686716997b2a",
             "Value": {
                 "id": "4d81e0cb-7fcf-43b8-be0c-aab68e2f5744",
                 "resourcePath": "views\\5be516a7-8b0c-4fa1-b553-686716997b2a.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "60a58e9e-71d4-4119-96ad-5e37d271ea23",
+            "Value": {
+                "id": "b079c72d-af01-4e4d-a8c7-30e3b719bc0a",
+                "resourcePath": "scripts\\ease_InOutCirc\\ease_InOutCirc.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -180,6 +196,14 @@
                 "id": "83a83c4d-3964-408e-99be-f8ca91f36e10",
                 "resourcePath": "sprites\\spr_jakeJusticeIdle\\spr_jakeJusticeIdle.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "79ef91d4-21b0-4243-a311-f23c773949d9",
+            "Value": {
+                "id": "346de740-a171-47f5-b38e-591db50308f2",
+                "resourcePath": "views\\79ef91d4-21b0-4243-a311-f23c773949d9.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -304,7 +328,8 @@
         }
     ],
     "script_order": [
-        "19a5a3df-c528-416d-878e-c5b8b3fbf2d0"
+        "19a5a3df-c528-416d-878e-c5b8b3fbf2d0",
+        "60a58e9e-71d4-4119-96ad-5e37d271ea23"
     ],
     "tutorial": ""
 }

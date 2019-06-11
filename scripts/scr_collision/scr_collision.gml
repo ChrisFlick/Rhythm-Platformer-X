@@ -1,3 +1,5 @@
+/// scr_collision(player)
+
 // Take player object and check for collisions
 
 /*********************
@@ -25,13 +27,7 @@ if (bbox_side != -1) { // Check to make sure player is in motion
 
     // Check to see if sides of sprite are touching any collision boxes
     if (tilemap_get_at_pixel(tilemap, bbox_side + player.horizontalSpeed, bbox_top) != 0) || (tilemap_get_at_pixel(tilemap, bbox_side + player.horizontalSpeed, bbox_bottom) != 0) { 
-
-        /*// Ensure player is not overlapping with collision box by moving it over 1 pixel.
-        if (player.horizontalSpeed > 0 ) { // Check if player is moving right and move them left.
-            player.x -= (player.x mod player.PLAYER_WIDTH) + (player.PLAYER_WIDTH - 1) - (bbox_right - x); 
-        } else { // Check if player is moving left and move them right.
-            player.x -= (player.x mod player.PLAYER_WIDTH) - (bbox_left - player.x)
-        }*/
+        
         player.horizontalSpeed = 0; // Set horizontalSpeed to 0.
     }
 }
