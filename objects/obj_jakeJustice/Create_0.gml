@@ -7,7 +7,6 @@ walkspeed = 0;
 horizontalSpeed = 0; // Horizontal speed
 
 yPOS = y; // Verticle speed
-initialY = y;
 falling = false;
 fallSpeed = 0;
 

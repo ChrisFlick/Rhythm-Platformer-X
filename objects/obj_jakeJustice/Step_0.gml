@@ -54,9 +54,8 @@ scr_collision(obj_jakeJustice);
 x += horizontalSpeed; // Move player left or right depending on + or - horizontalSpeed.
 
 if (falling) {
-    y += fallSpeed;
-} else {
-    y = yPOS; // Move player up or down based on yPOS.
+    yPOS += fallSpeed;
 }
-    
+
+y = yPOS; // Move player up or down based on yPOS.
     
