@@ -18,6 +18,7 @@ if (verticalStart++ == LAND_DURATION) {
 }
 
 
+
 // Calculate horizontal movement.
 var movement = key_right - key_left;
 
@@ -64,10 +65,7 @@ if (key_jump && verticalTime == -1) {
 
 // If ease_Function is complete initializing ease_function for falling.
 if (verticalTime == VERTICAL_DURATION) && (!falling) {
-    verticalTime = 0;
-    verticalChange = -1;
-    verticalStart = y;
-    falling = true;
+    scr_initiateFall();
 
 // Else if jumping use ease_function.
 } else if (verticalTime != -1) && (!falling) {

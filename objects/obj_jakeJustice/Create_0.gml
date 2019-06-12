@@ -8,6 +8,7 @@ horizontalSpeed = 0; // Horizontal speed
 
 yPOS = y; // Verticle speed
 falling = false;
+
 fallSpeed = 0;
 
 // Horizontal easing variables.

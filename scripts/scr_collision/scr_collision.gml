@@ -23,10 +23,13 @@ if (player.horizontalSpeed > 0) { // Check if player is moving right
     bbox_side = -1; // Set bbox_side to null if player is neither moving left or right.
 }
 
+t1 = tilemap_get_at_pixel(tilemap, bbox_side + player.horizontalSpeed, bbox_top);
+t2 = tilemap_get_at_pixel(tilemap, bbox_side + player.horizontalSpeed, bbox_bottom);
+
 if (bbox_side != -1) { // Check to make sure player is in motion
 
     // Check to see if sides of sprite are touching any collision boxes
-    if (tilemap_get_at_pixel(tilemap, bbox_side + player.horizontalSpeed, bbox_top) != 0) || (tilemap_get_at_pixel(tilemap, bbox_side + player.horizontalSpeed, bbox_bottom) != 0) { 
+    if (t1 != 0) || (t2 != 0) { 
         
         player.horizontalSpeed = 0; // Set horizontalSpeed to 0.
     }
@@ -41,33 +44,36 @@ if (player.falling) { // Check if player is moving up
     bbox_side = -1; // Set bbox_side to null if player is neither moving down or up.
 }
 
+t1 = tilemap_get_at_pixel(tilemap, bbox_left, bbox_side + player.fallSpeed);
+t2 = tilemap_get_at_pixel(tilemap, bbox_right, bbox_side + player.fallSpeed);
+
 if (bbox_side != -1) { // Check to make sure player is in motion
 
     // Check to see if sides of sprite are touching any collision boxes
-    if (tilemap_get_at_pixel(tilemap, bbox_left, bbox_side + player.fallSpeed) != 0) || (tilemap_get_at_pixel(tilemap, bbox_right, bbox_side + player.fallSpeed) != 0) { 
-        var playerHeight = sprite_get_height(player.sprite_index);
+    if (t1 != 0) || (t2 != 0) { 
 
-        if (player.fallSpeed > 0) {
-            yPOS -= sign(player.fallSpeed);
-            
-        } 
         
         // If falling end ease_function.
         if (player.falling) {
+			yPOS -= sign(player.fallSpeed);
+			
             player.fallSpeed = 0; // Set fallspeed to 0.
             player.falling = false;
 
+
             // Set to null.
-            verticalChange = -1 
+            verticalChange = -1;
             verticalTime = -1; 
             verticalStart = -1; 
 
         // Else initialize ease_function for falling.
         } else {
-            verticalTime = 0;
-            verticalChange = -1;
-            verticalStart = y;
-            falling = true;
+			yPOS += 10; // Push player down 10
+            scr_initiateFall();
         }
-    }
+    } else { // <-- Missing if statement  
+		if (player.verticalTime == -1) {
+			//scr_initiateFall();
+		}	
+	}
 }
