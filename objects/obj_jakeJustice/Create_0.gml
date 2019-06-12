@@ -2,12 +2,18 @@
 ***** Variables ******
 *********************/
 
+// Falling
+FALL_NUMBER = 30;
+
+fallCount = 0;
+
 // Movement variables
 walkspeed = 0;
 horizontalSpeed = 0; // Horizontal speed
 ledgeGrab = false;
+movement = 0;
 
-yPOS = y; // Verticle speed
+yPOS = self.y; // Verticle speed
 falling = false;
 
 fallSpeed = 0;
@@ -15,7 +21,7 @@ fallSpeed = 0;
 // Horizontal easing variables.
 HORIZONTAL_DURATION = 50; // Duration of ease function.
 MAX_WALKSPEED = 10; // Max Walkspeed.
-STARTING_WALKSPEED = 0; // Starting Walkspeed.
+STARTING_WALKSPEED = 1; // Starting Walkspeed.
 
 horizontalTime = 0; // Current step in ease function.
 

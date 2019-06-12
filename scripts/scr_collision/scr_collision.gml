@@ -43,9 +43,13 @@ if (bbox_side != -1) { // Check to make sure player is in motion
 	    verticalTime = -1; 
 	    verticalStart = -1; 
 		
+		//show_debug_message("In Horizontal Collision");
+		//show_debug_message("Movement: " + string(player.movement));
+		x -= player.movement * 2; // Push player away from wall.
         player.horizontalSpeed = 0; // Set horizontalSpeed to 0.
     }
 }
+
 
 
 
@@ -66,7 +70,8 @@ if (bbox_side != -1) { // Check to make sure player is in motion
     // Check to see if sides of sprite are touching any collision boxes
     if (t1 != 0) || (t2 != 0) { 
 
-        
+        player.fallCount = 0;
+		
         // If falling end ease_function.
         if (player.falling) {
 			yPOS -= floor(sign(player.fallSpeed));
@@ -83,6 +88,7 @@ if (bbox_side != -1) { // Check to make sure player is in motion
         // Else initialize ease_function for falling.
         } else {
 			yPOS += 10; // Push player down 10
+			
             scr_initiateFall();
         }
     } 

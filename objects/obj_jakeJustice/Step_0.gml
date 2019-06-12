@@ -12,6 +12,11 @@ key_jump = keyboard_check_pressed(vk_space); // Jump when Space Bar is pressed.
 ****** Movement ******
 *********************/
 
+// Check to see if player is off a ledge
+if (fallCount++ > FALL_NUMBER && !ledgeGrab) {
+	falling = true;
+}
+
 // Reset after landing.
 if (verticalStart++ == LAND_DURATION) {
     verticalStart = -1;
@@ -20,24 +25,21 @@ if (verticalStart++ == LAND_DURATION) {
 
 
 // Calculate horizontal movement.
-var movement = key_right - key_left;
+movement = key_right - key_left;
 
-if (ledgeGrab) {
-	movement = 0;
-}
 
-if (movement != 0) {
+if (movement != 0 && !ledgeGrab) {
 	ledgeGrab = false;
 	
     // Change sprite to running + direction.
     if (verticalTime = -1) {
-        sprite_index = spr_jakeJusticeRun;
+        self.sprite_index = spr_jakeJusticeRun;
     }
     
     if (movement < 0) {
-        image_xscale = -1;
+        self.image_xscale = -1;
     } else {
-        image_xscale = 1;
+        self.image_xscale = 1;
     }
 
     if (horizontalTime < HORIZONTAL_DURATION) {
@@ -51,7 +53,7 @@ if (movement != 0) {
 
     // Change sprite to idle.
     if (verticalTime = -1) {
-        sprite_index = spr_jakeJusticeIdle;
+        self.sprite_index = spr_jakeJusticeIdle;
     } 
 }
 
@@ -61,26 +63,30 @@ horizontalSpeed = movement * walkspeed;
 // Calculate Verticle movement.
 
 if (ledgeGrab) {
-	sprite_index = spr_jakeJusticeLedgeGrab;
+	self.sprite_index = spr_jakeJusticeLedgeGrab;
 }
+
+// Check for collision
+scr_collision(obj_jakeJustice);
 
 // If ease_Function is not being used and jump is pressed start ease_function for jump.
 if (key_jump && verticalTime == -1) {
 	var INITIAL_JUMP_Y = 1;
-	
-	y -= INITIAL_JUMP_Y;
-	
+	self.y -= INITIAL_JUMP_Y;
+
 	// Ensure player can jump when pressing a directrion
 	horizontalSpeed = 0;
 	
 	
-    verticalStart = y;
+    verticalStart = self.y;
     verticalChange = -JUMP_RATE;
     verticalTime = 0;
 	
 	ledgeGrab = false;
 	
-    sprite_index = spr_jakeJusticeJump
+	fallCount = 0;
+	
+    self.sprite_index = spr_jakeJusticeJump
 }
 
 // If ease_Function is complete initializing ease_function for falling.
@@ -94,18 +100,16 @@ if (verticalTime == VERTICAL_DURATION) && (!falling) {
     fallSpeed = ease_InOutCirc(verticalTime++, STARTING_FALL_RATE, MAX_FALL_RATE, VERTICAL_DURATION);
 }
 
-// Check for collision
-scr_collision(obj_jakeJustice);
 
 
-x += horizontalSpeed; // Move player left or right depending on + or - horizontalSpeed.
+
+self.x += horizontalSpeed; // Move player left or right depending on + or - horizontalSpeed.
 
 if (falling) {
     yPOS += fallSpeed;
-    sprite_index = spr_jakeJusticeFall;
+    self.sprite_index = spr_jakeJusticeFall;
 } else if (verticalStart == -2) {
-    sprite_index = spr_jakeJusticeLand;
+    self.sprite_index = spr_jakeJusticeLand;
 }
 
-y = yPOS; // Move player up or down based on yPOS.
-    
+self.y = yPOS; // Move player up or down based on yPOS.
