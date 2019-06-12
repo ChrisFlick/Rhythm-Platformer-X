@@ -22,6 +22,10 @@ if (verticalStart++ == LAND_DURATION) {
 // Calculate horizontal movement.
 var movement = key_right - key_left;
 
+if (ledgeGrab) {
+	movement = 0;
+}
+
 if (movement != 0) {
 	ledgeGrab = false;
 	
@@ -51,6 +55,7 @@ if (movement != 0) {
     } 
 }
 
+
 horizontalSpeed = movement * walkspeed;
 
 // Calculate Verticle movement.
@@ -61,8 +66,13 @@ if (ledgeGrab) {
 
 // If ease_Function is not being used and jump is pressed start ease_function for jump.
 if (key_jump && verticalTime == -1) {
-	var INITIAL_JUMP = 1
-	y -= INITIAL_JUMP;
+	var INITIAL_JUMP_Y = 1;
+	
+	y -= INITIAL_JUMP_Y;
+	
+	// Ensure player can jump when pressing a directrion
+	horizontalSpeed = 0;
+	
 	
     verticalStart = y;
     verticalChange = -JUMP_RATE;

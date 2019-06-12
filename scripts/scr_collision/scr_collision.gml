@@ -69,7 +69,7 @@ if (bbox_side != -1) { // Check to make sure player is in motion
         
         // If falling end ease_function.
         if (player.falling) {
-			yPOS -= sign(player.fallSpeed);
+			yPOS -= floor(sign(player.fallSpeed));
 			
             player.fallSpeed = 0; // Set fallspeed to 0.
             player.falling = false;

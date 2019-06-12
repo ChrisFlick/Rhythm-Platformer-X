@@ -33,4 +33,4 @@ verticalStart = -1; // Starting position.
 
 // Tilemaps
 tilemapCollision = layer_tilemap_get_id("Collision");
-tilemapLedge = layer_tilemap_get_id("Ledge");
+//tilemapLedge = layer_tilemap_get_id("Ledge");
