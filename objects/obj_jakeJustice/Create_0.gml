@@ -5,6 +5,7 @@
 // Movement variables
 walkspeed = 0;
 horizontalSpeed = 0; // Horizontal speed
+ledgeGrab = false;
 
 yPOS = y; // Verticle speed
 falling = false;
@@ -31,4 +32,5 @@ verticalTime = -1; // Current step in ease function.
 verticalStart = -1; // Starting position.
 
 // Tilemaps
-tilemap = layer_tilemap_get_id("Collision");
+tilemapCollision = layer_tilemap_get_id("Collision");
+tilemapLedge = layer_tilemap_get_id("Ledge");

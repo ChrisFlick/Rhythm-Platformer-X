@@ -23,7 +23,8 @@ if (verticalStart++ == LAND_DURATION) {
 var movement = key_right - key_left;
 
 if (movement != 0) {
-
+	ledgeGrab = false;
+	
     // Change sprite to running + direction.
     if (verticalTime = -1) {
         sprite_index = spr_jakeJusticeRun;
@@ -54,12 +55,21 @@ horizontalSpeed = movement * walkspeed;
 
 // Calculate Verticle movement.
 
+if (ledgeGrab) {
+	sprite_index = spr_jakeJusticeLedgeGrab;
+}
+
 // If ease_Function is not being used and jump is pressed start ease_function for jump.
 if (key_jump && verticalTime == -1) {
+	var INITIAL_JUMP = 1
+	y -= INITIAL_JUMP;
+	
     verticalStart = y;
     verticalChange = -JUMP_RATE;
     verticalTime = 0;
-
+	
+	ledgeGrab = false;
+	
     sprite_index = spr_jakeJusticeJump
 }
 
