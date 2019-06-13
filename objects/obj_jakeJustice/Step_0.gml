@@ -60,14 +60,16 @@ if (movement != 0 && !ledgeGrab) {
 
 horizontalSpeed = movement * walkspeed;
 
-// Calculate Verticle movement.
 
+// Check to see if grabbing edge
 if (ledgeGrab) {
 	self.sprite_index = spr_jakeJusticeLedgeGrab;
 }
 
 // Check for collision
 scr_collision(obj_jakeJustice);
+
+// Calculate Verticle movement.
 
 // If ease_Function is not being used and jump is pressed start ease_function for jump.
 if (key_jump && verticalTime == -1) {
@@ -97,7 +99,7 @@ if (verticalTime == VERTICAL_DURATION) && (!falling) {
 } else if (verticalTime != -1) && (!falling) {
     yPOS = ease_InOutCirc(verticalTime++, verticalStart, verticalChange, VERTICAL_DURATION);
 } else if (falling) {
-    fallSpeed = ease_InOutCirc(verticalTime++, STARTING_FALL_RATE, MAX_FALL_RATE, VERTICAL_DURATION);
+    fallSpeed = ease_InOutCirc(verticalTime++, STARTING_FALL_RATE,	TERMINAL_VELOCITY, VERTICAL_DURATION);
 }
 
 

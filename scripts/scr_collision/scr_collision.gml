@@ -16,9 +16,9 @@ var bbox_side;
 
 // Horizontal Collision
 if (player.horizontalSpeed > 0) { // Check if player is moving right
-    bbox_side = bbox_right;
+    bbox_side = player.bbox_right;
 } else if (player.horizontalSpeed < 0) { // Check if player is moving left
-    bbox_side = bbox_left;
+    bbox_side = player.bbox_left;
 } else {
     bbox_side = -1; // Set bbox_side to null if player is neither moving left or right.
 }
@@ -30,22 +30,24 @@ if (bbox_side != -1) { // Check to make sure player is in motion
 
     // Check to see if sides of sprite are touching any collision boxes
     if (t1 != 0) || (t2 != 0) { 
-        
-		player.fallSpeed = 0; // Set fallspeed to 0.
-	    player.falling = false;
+        t1 = tilemap_get_at_pixel(tilemapLedge, bbox_side + player.horizontalSpeed, bbox_top);
+		t2 = tilemap_get_at_pixel(tilemapLedge, bbox_side + player.horizontalSpeed, bbox_bottom);
 		
-		player.horizontalSpeed = 0.
-		player.ledgeGrab = true;
+		if (t1 != 0) || (t2 != 0) {
+			player.fallSpeed = 0; // Set fallspeed to 0.
+			player.falling = false;
+			player.horizontalSpeed = 0.
+			player.ledgeGrab = true;
+			
+			// Set to null.
+			player.verticalChange = -1;
+			player.verticalTime = -1; 
+			player.verticalStart = -1; 
+		}
 
-
-	    // Set to null.
-	    verticalChange = -1;
-	    verticalTime = -1; 
-	    verticalStart = -1; 
-		
 		//show_debug_message("In Horizontal Collision");
 		//show_debug_message("Movement: " + string(player.movement));
-		x -= player.movement * 2; // Push player away from wall.
+		player.x -= player.movement * 2; // Push player away from wall.
         player.horizontalSpeed = 0; // Set horizontalSpeed to 0.
     }
 }
@@ -55,15 +57,21 @@ if (bbox_side != -1) { // Check to make sure player is in motion
 
 // Verticle Collision
 if (player.falling) { // Check if player is moving up
-    bbox_side = bbox_bottom
+    bbox_side = player.bbox_bottom
 } else if (!player.falling) { // Check if player is moving down
-    bbox_side = bbox_top;
+    bbox_side = player.bbox_top;
 } else {
-    bbox_side = -1; // Set bbox_side to null if player is neither moving down or up.
+    bbox_side = player.bbox_bottom; // Set bbox_side to null if player is neither moving down or up.
 }
 
-t1 = tilemap_get_at_pixel(tilemapCollision, bbox_left, bbox_side + player.fallSpeed);
-t2 = tilemap_get_at_pixel(tilemapCollision, bbox_right, bbox_side + player.fallSpeed);
+t1 = tilemap_get_at_pixel(tilemapCollision, player.bbox_left, bbox_side + player.fallSpeed);
+t2 = tilemap_get_at_pixel(tilemapCollision, player.bbox_right, bbox_side + player.fallSpeed);
+
+if (falling) {
+	var verticalSpeed = falling
+} else {
+	var verticalSpeed = STARTING_FALL_RATE;
+}
 
 if (bbox_side != -1) { // Check to make sure player is in motion
 
