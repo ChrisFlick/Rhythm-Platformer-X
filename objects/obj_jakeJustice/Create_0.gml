@@ -3,7 +3,7 @@
 *********************/
 
 // Falling
-FALL_NUMBER = 25;
+FALL_NUMBER = 15;
 
 fallCount = 0;
 fallSpeed = 0;
@@ -11,6 +11,8 @@ falling = false;
 
 
 // Movement variables
+INITIAL_JUMP= 2; // Makes jump more springy 
+
 walkspeed = 0;
 horizontalSpeed = 0; // Horizontal speed
 ledgeGrab = false;

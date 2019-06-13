@@ -73,8 +73,7 @@ scr_collision(obj_jakeJustice);
 
 // If ease_Function is not being used and jump is pressed start ease_function for jump.
 if (key_jump && verticalTime == -1) {
-	var INITIAL_JUMP_Y = 1;
-	self.y -= INITIAL_JUMP_Y;
+	self.y -= INITIAL_JUMP;
 
 	// Ensure player can jump when pressing a directrion
 	horizontalSpeed = 0;

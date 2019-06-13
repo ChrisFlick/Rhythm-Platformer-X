@@ -33,6 +33,8 @@ if (bbox_side != -1) { // Check to make sure player is in motion
         t1 = tilemap_get_at_pixel(tilemapLedge, bbox_side + player.horizontalSpeed, bbox_top);
 		t2 = tilemap_get_at_pixel(tilemapLedge, bbox_side + player.horizontalSpeed, bbox_bottom);
 		
+		player.x -= player.movement * sign(horizontalSpeed); // Push player away from wall.
+		
 		if (t1 != 0) || (t2 != 0) {
 			player.fallSpeed = 0; // Set fallspeed to 0.
 			player.falling = false;
@@ -47,7 +49,7 @@ if (bbox_side != -1) { // Check to make sure player is in motion
 
 		//show_debug_message("In Horizontal Collision");
 		//show_debug_message("Movement: " + string(player.movement));
-		player.x -= player.movement * 2; // Push player away from wall.
+		
         player.horizontalSpeed = 0; // Set horizontalSpeed to 0.
     }
 }
@@ -75,12 +77,17 @@ if (bbox_side != -1) { // Check to make sure player is in motion
 
     // Check to see if sides of sprite are touching any collision boxes
     if (t1 != 0) || (t2 != 0) { 
-
+		// For debugging
+		//t1 = tilemap_get_at_pixel(tilemapCollision, player.bbox_left, bbox_side + player.fallSpeed);
+		//t2 = tilemap_get_at_pixel(tilemapCollision, player.bbox_right, bbox_side + player.fallSpeed);
+		
+		// Reset so player floats when there isn't collision
         player.fallCount = 0;
 		
         // If falling end ease_function.
         if (player.falling) {
-			yPOS -= sign(player.fallSpeed) + 0.1;
+
+			yPOS -= sign(player.fallSpeed);
 			
             player.fallSpeed = 0; // Set fallspeed to 0.
             player.falling = false;
