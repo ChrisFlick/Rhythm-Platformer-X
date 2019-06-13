@@ -3,9 +3,9 @@
 *********************/
 
 // Falling
-FALL_NUMBER = 15;
+hover = 15;
 
-fallCount = 0;
+hoverCount = 0;
 fallSpeed = 0;
 falling = false;
 

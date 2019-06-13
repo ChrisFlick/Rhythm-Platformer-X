@@ -30,10 +30,12 @@ if (bbox_side != -1) { // Check to make sure player is in motion
 
     // Check to see if sides of sprite are touching any collision boxes
     if (t1 != 0) || (t2 != 0) { 
-        t1 = tilemap_get_at_pixel(tilemapLedge, bbox_side + player.horizontalSpeed, bbox_top);
-		t2 = tilemap_get_at_pixel(tilemapLedge, bbox_side + player.horizontalSpeed, bbox_bottom);
-		
 		player.x -= player.movement * sign(horizontalSpeed); // Push player away from wall.
+		
+		
+		// Check to see if player is grabbing ledge
+		t1 = tilemap_get_at_pixel(tilemapLedge, bbox_side + player.horizontalSpeed, bbox_top);
+		t2 = tilemap_get_at_pixel(tilemapLedge, bbox_side + player.horizontalSpeed, bbox_bottom);
 		
 		if (t1 != 0) || (t2 != 0) {
 			player.fallSpeed = 0; // Set fallspeed to 0.
@@ -67,10 +69,8 @@ if (player.falling) { // Check if player is moving up
 }
 
 
-var verticalSpeed = TERMINAL_VELOCITY;
-t1 = tilemap_get_at_pixel(tilemapCollision, player.bbox_left, bbox_side + verticalSpeed);
-t2 = tilemap_get_at_pixel(tilemapCollision, player.bbox_right, bbox_side + verticalSpeed);
-
+t1 = tilemap_get_at_pixel(tilemapCollision, player.bbox_left, bbox_side + TERMINAL_VELOCITY);
+t2 = tilemap_get_at_pixel(tilemapCollision, player.bbox_right, bbox_side + TERMINAL_VELOCITY);
 
 
 if (bbox_side != -1) { // Check to make sure player is in motion
@@ -82,7 +82,7 @@ if (bbox_side != -1) { // Check to make sure player is in motion
 		//t2 = tilemap_get_at_pixel(tilemapCollision, player.bbox_right, bbox_side + player.fallSpeed);
 		
 		// Reset so player floats when there isn't collision
-        player.fallCount = 0;
+        player.hoverCount = 0;
 		
         // If falling end ease_function.
         if (player.falling) {
@@ -107,12 +107,3 @@ if (bbox_side != -1) { // Check to make sure player is in motion
     } 
 }	
 		
-/*if (player.verticalTime == -1) {
-	t1 = tilemap_get_at_pixel(tilemapCollision, bbox_left, bbox_side +	1);
-	t2 = tilemap_get_at_pixel(tilemapCollision, bbox_right, bbox_side + 1);
-			
-	if (t1 != 0) || (t2 != 0) { 
-		scr_initiateFall();
-	}
-}*/
-

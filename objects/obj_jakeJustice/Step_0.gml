@@ -13,7 +13,7 @@ key_jump = keyboard_check_pressed(vk_space); // Jump when Space Bar is pressed.
 *********************/
 
 // Check to see if player is off a ledge
-if (fallCount++ > FALL_NUMBER && !ledgeGrab) {
+if (hoverCount++ > hover && !ledgeGrab) {
 	falling = true;
 }
 
@@ -85,7 +85,7 @@ if (key_jump && verticalTime == -1) {
 	
 	ledgeGrab = false;
 	
-	fallCount = 0;
+	hoverCount = 0;
 	
     self.sprite_index = spr_jakeJusticeJump
 }
