@@ -30,7 +30,7 @@ if (bbox_side != -1) { // Check to make sure player is in motion
 
     // Check to see if sides of sprite are touching any collision boxes
     if (t1 != 0) || (t2 != 0) { 
-		player.x -= player.movement * sign(horizontalSpeed); // Push player away from wall.
+		player.x -= sign(horizontalSpeed); // Push player away from wall.
 		
 		
 		// Check to see if player is grabbing ledge
@@ -100,7 +100,7 @@ if (bbox_side != -1) { // Check to make sure player is in motion
 
         // Else initialize ease_function for falling.
         } else {
-			yPOS += 10; // Push player down 10
+			//yPOS += 10; // Push player down 10
 			
             scr_initiateFall();
         }
