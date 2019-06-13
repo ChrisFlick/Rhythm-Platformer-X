@@ -61,7 +61,7 @@ if (movement != 0 && !ledgeGrab) {
 horizontalSpeed = movement * walkspeed;
 
 
-// Check to see if grabbing edge
+// Check to see if grabn
 if (ledgeGrab) {
 	self.sprite_index = spr_jakeJusticeLedgeGrab;
 }

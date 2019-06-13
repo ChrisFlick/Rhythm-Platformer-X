@@ -64,14 +64,12 @@ if (player.falling) { // Check if player is moving up
     bbox_side = player.bbox_bottom; // Set bbox_side to null if player is neither moving down or up.
 }
 
-t1 = tilemap_get_at_pixel(tilemapCollision, player.bbox_left, bbox_side + player.fallSpeed);
-t2 = tilemap_get_at_pixel(tilemapCollision, player.bbox_right, bbox_side + player.fallSpeed);
 
-if (falling) {
-	var verticalSpeed = falling
-} else {
-	var verticalSpeed = STARTING_FALL_RATE;
-}
+var verticalSpeed = TERMINAL_VELOCITY;
+t1 = tilemap_get_at_pixel(tilemapCollision, player.bbox_left, bbox_side + verticalSpeed);
+t2 = tilemap_get_at_pixel(tilemapCollision, player.bbox_right, bbox_side + verticalSpeed);
+
+
 
 if (bbox_side != -1) { // Check to make sure player is in motion
 
@@ -82,7 +80,7 @@ if (bbox_side != -1) { // Check to make sure player is in motion
 		
         // If falling end ease_function.
         if (player.falling) {
-			yPOS -= floor(sign(player.fallSpeed));
+			yPOS -= sign(player.fallSpeed) + 0.1;
 			
             player.fallSpeed = 0; // Set fallspeed to 0.
             player.falling = false;
