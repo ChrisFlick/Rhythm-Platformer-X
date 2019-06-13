@@ -3,7 +3,7 @@
 *********************/
 
 // Falling
-hover = 15;
+hover = 25;
 
 hoverCount = 0;
 fallSpeed = 0;

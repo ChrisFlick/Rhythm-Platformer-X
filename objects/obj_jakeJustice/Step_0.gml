@@ -28,8 +28,8 @@ if (verticalStart++ == LAND_DURATION) {
 movement = key_right - key_left;
 
 
-if (movement != 0 && !ledgeGrab) {
-	ledgeGrab = false;
+if (movement != 0) {
+
 	
     // Change sprite to running + direction.
     if (verticalTime = -1) {
