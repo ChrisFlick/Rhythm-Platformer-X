@@ -23,8 +23,10 @@ if (player.horizontalSpeed > 0) { // Check if player is moving right
     bbox_side = -1; // Set bbox_side to null if player is neither moving left or right.
 }
 
-t1 = tilemap_get_at_pixel(tilemapCollision, bbox_side + player.horizontalSpeed, bbox_top);
-t2 = tilemap_get_at_pixel(tilemapCollision, bbox_side + player.horizontalSpeed, bbox_bottom);
+var t1 = tilemap_get_at_pixel(tilemapCollision, bbox_side + player.horizontalSpeed, bbox_top);
+var t2 = tilemap_get_at_pixel(tilemapCollision, bbox_side + player.horizontalSpeed, bbox_bottom);
+var t3 = tilemap_get_at_pixel(tilemapCollision, player.bbox_left, player.bbox_bottom + TERMINAL_VELOCITY);
+var t4 = tilemap_get_at_pixel(tilemapCollision, player.bbox_right, player.bbox_bottom + TERMINAL_VELOCITY);
 
 if (bbox_side != -1) { // Check to make sure player is in motion
 
@@ -32,8 +34,12 @@ if (bbox_side != -1) { // Check to make sure player is in motion
     if (t1 != 0) || (t2 != 0) { 
 		player.hoverCount = 0;
 		
-		//player.x -= sign(MAX_WALKSPEED) * player.movement + 1; // Push player away from wall.
-		//player.y -= sign(TERMINAL_VELOCITY);
+		/*player.x -= sign(MAX_WALKSPEED) * player.movement; // Push player away from wall.
+		
+		if (t3 != 0) || (t4 != 0) {
+			player.y -= (bbox_bottom mod 32 - (bbox_bottom - player.y)) + 31;
+		}*/
+		player.y -= sign(TERMINAL_VELOCITY);
 		
 		
 		// Check to see if player is grabbing ledge
@@ -73,15 +79,13 @@ if (player.falling) { // Check if player is moving up
     bbox_side = player.bbox_bottom; // Set bbox_side to null if player is neither moving down or up.
 }
 
-
-t1 = tilemap_get_at_pixel(tilemapCollision, player.bbox_left, bbox_side + TERMINAL_VELOCITY);
-t2 = tilemap_get_at_pixel(tilemapCollision, player.bbox_right, bbox_side + TERMINAL_VELOCITY);
-
+var t3 = tilemap_get_at_pixel(tilemapCollision, player.bbox_left, bbox_side + TERMINAL_VELOCITY);
+var t4 = tilemap_get_at_pixel(tilemapCollision, player.bbox_right, bbox_side + TERMINAL_VELOCITY);
 
 if (bbox_side != -1) { // Check to make sure player is in motion
 
     // Check to see if sides of sprite are touching any collision boxes
-    if (t1 != 0) || (t2 != 0) { 
+    if (t3 != 0) || (t4 != 0) { 
 		// For debugging
 		
 		
@@ -92,7 +96,8 @@ if (bbox_side != -1) { // Check to make sure player is in motion
 		
         // If falling end ease_function.
         if (player.falling) {
-			player.y -= (bbox_bottom mod 32 - (bbox_bottom - player.y)) + 31;
+			// Push player up if they are falling into the ground.
+			player.y -= (bbox_bottom mod 32 - (bbox_bottom - player.y)) + 32; // Here be dragons.
 			
 			
             player.falling = false;
@@ -106,7 +111,8 @@ if (bbox_side != -1) { // Check to make sure player is in motion
 
         // Else initialize ease_function for falling.
         } else {
-			player.yPOS -= (bbox_bottom mod 32 - (bbox_bottom - player.y)) - 20; // Push player down 10
+			// Push player down if they collide with the roof
+			player.yPOS -= (bbox_bottom mod 32 - (bbox_bottom - player.y)) - 20; // Here be dragons.
 			
 			
 			// Allow player to continue to float if they are at the top of the level hitting their head.
@@ -121,4 +127,5 @@ if (bbox_side != -1) { // Check to make sure player is in motion
         }
     } 
 }	
+
 		
