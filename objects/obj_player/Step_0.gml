@@ -104,7 +104,7 @@ if (verticalTime == VERTICAL_DURATION) && (!falling) {
 }
 
 // Check for collision
-scr_collision(obj_jakeJustice);
+scr_collision(self);
 
 if (falling) {
     yPOS += fallSpeed;

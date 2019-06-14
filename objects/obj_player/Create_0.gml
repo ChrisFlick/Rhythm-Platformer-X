@@ -2,15 +2,16 @@
 ***** Variables ******
 *********************/
 
+// Damage
+damage = 5;
+
 // Player location
-
-
 yPOS = self.y; 
 
 
 
 // Falling
-hover = 25;
+hover = 15;
 hoverCount = 0;
 fallSpeed = 0;
 falling = false;
