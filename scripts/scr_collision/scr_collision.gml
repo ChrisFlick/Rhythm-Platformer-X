@@ -1,4 +1,4 @@
-/// scr_collision(player)
+///@ scr_collision(player)
 
 // Take player object and check for collisions
 
@@ -33,6 +33,7 @@ if (bbox_side != -1) { // Check to make sure player is in motion
 		player.hoverCount = 0;
 		
 		//player.x -= sign(MAX_WALKSPEED) * player.movement + 1; // Push player away from wall.
+		//player.y -= sign(TERMINAL_VELOCITY);
 		
 		
 		// Check to see if player is grabbing ledge

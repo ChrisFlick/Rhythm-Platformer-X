@@ -8,7 +8,8 @@
         "b6e2d7d5-59c1-43b1-8d86-4b5c1cd34695",
         "b8508ab9-77ac-4c79-9c47-da0975bdd900",
         "ee0db4b5-4241-40a8-b180-fa9cac0f419e",
-        "9f83aa69-5494-4719-9a44-6cd02ef6c65e"
+        "9f83aa69-5494-4719-9a44-6cd02ef6c65e",
+        "553b987f-6176-4266-b90d-72d129fd643f"
     ],
     "filterType": "GMScript",
     "folderName": "Easeing",

@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "316d1a47-88ca-47cc-9e17-a6ad79bfa5b5",
+            "Value": {
+                "id": "fa24db18-a1a5-4a57-bc82-122e15c3036a",
+                "resourcePath": "sprites\\spr_plusFive\\spr_plusFive.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "34b737e5-dbea-4a9e-9631-f35966b31de7",
             "Value": {
                 "id": "70c93847-9355-418a-b6f5-2821993587e6",
@@ -159,6 +167,14 @@
             }
         },
         {
+            "Key": "553b987f-6176-4266-b90d-72d129fd643f",
+            "Value": {
+                "id": "e65a6a83-bfd5-4e58-8107-ba9d5b15b495",
+                "resourcePath": "scripts\\ease_InExpo\\ease_InExpo.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "567ff4fb-2229-43ab-b511-52b140215231",
             "Value": {
                 "id": "508cdd6b-f3d3-41b4-93e0-4e9508d839ea",
@@ -220,6 +236,14 @@
                 "id": "83a83c4d-3964-408e-99be-f8ca91f36e10",
                 "resourcePath": "sprites\\spr_jakeJusticeIdle\\spr_jakeJusticeIdle.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "75f82f46-e090-4196-afff-0fac8f9deb9e",
+            "Value": {
+                "id": "67b13687-0933-4f3d-a30c-8f1f5d8cea91",
+                "resourcePath": "objects\\obj_plusFive\\obj_plusFive.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -461,6 +485,7 @@
         "b8508ab9-77ac-4c79-9c47-da0975bdd900",
         "ee0db4b5-4241-40a8-b180-fa9cac0f419e",
         "9f83aa69-5494-4719-9a44-6cd02ef6c65e",
+        "553b987f-6176-4266-b90d-72d129fd643f",
         "19a5a3df-c528-416d-878e-c5b8b3fbf2d0",
         "fd858f6f-3688-4c7a-82b3-75a8dcda1bab"
     ],
