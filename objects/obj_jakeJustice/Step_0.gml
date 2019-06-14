@@ -28,7 +28,7 @@ if (verticalStart++ == LAND_DURATION) {
 movement = key_right - key_left;
 
 
-if (movement != 0) {
+if (movement != 0 && !ledgeGrab) {
 
 	
     // Change sprite to running + direction.
@@ -103,7 +103,6 @@ if (verticalTime == VERTICAL_DURATION) && (!falling) {
 
 
 
-
 self.x += horizontalSpeed; // Move player left or right depending on + or - horizontalSpeed.
 
 if (falling) {
@@ -113,4 +112,7 @@ if (falling) {
     self.sprite_index = spr_jakeJusticeLand;
 }
 
+
+
 self.y = yPOS; // Move player up or down based on yPOS.
+

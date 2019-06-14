@@ -100,7 +100,7 @@ if (bbox_side != -1) { // Check to make sure player is in motion
 
         // Else initialize ease_function for falling.
         } else {
-			//yPOS += 10; // Push player down 10
+			yPOS += 10; // Push player down 10
 			
             scr_initiateFall();
         }
