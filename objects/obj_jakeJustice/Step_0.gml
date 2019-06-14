@@ -6,7 +6,14 @@
 key_left = keyboard_check(ord("A")); // Move left as A is held.
 key_right = keyboard_check(ord("D")); // Move right as D is held.
 key_jump = keyboard_check_pressed(vk_space); // Jump when Space Bar is pressed.
+key_reset = keyboard_check_pressed(ord("R")); // Reset position when R is pressed
 
+
+// RESET LOCATION (for testing purposes)
+if (key_reset) {
+	self.x = INITIAL_X;
+	self.y = INITIAL_Y;
+}
 
 /*********************
 ****** Movement ******
@@ -66,8 +73,7 @@ if (ledgeGrab) {
 	self.sprite_index = spr_jakeJusticeLedgeGrab;
 }
 
-// Check for collision
-scr_collision(obj_jakeJustice);
+ 
 
 // Calculate Verticle movement.
 
@@ -101,9 +107,8 @@ if (verticalTime == VERTICAL_DURATION) && (!falling) {
     fallSpeed = ease_InOutCirc(verticalTime++, STARTING_FALL_RATE,	TERMINAL_VELOCITY, VERTICAL_DURATION);
 }
 
-
-
-self.x += horizontalSpeed; // Move player left or right depending on + or - horizontalSpeed.
+// Check for collision
+scr_collision(obj_jakeJustice);
 
 if (falling) {
     yPOS += fallSpeed;
@@ -114,5 +119,6 @@ if (falling) {
 
 
 
+self.x += horizontalSpeed; // Move player left or right depending on + or - horizontalSpeed.
 self.y = yPOS; // Move player up or down based on yPOS.
 

@@ -30,7 +30,9 @@ if (bbox_side != -1) { // Check to make sure player is in motion
 
     // Check to see if sides of sprite are touching any collision boxes
     if (t1 != 0) || (t2 != 0) { 
-		player.x -= sign(MAX_WALKSPEED) * player.movement; // Push player away from wall.
+		player.hoverCount = 0;
+		
+		player.x -= sign(MAX_WALKSPEED) * player.movement + 1; // Push player away from wall.
 		
 		
 		// Check to see if player is grabbing ledge
@@ -47,6 +49,8 @@ if (bbox_side != -1) { // Check to make sure player is in motion
 			player.verticalChange = -1;
 			player.verticalTime = -1; 
 			player.verticalStart = -1; 
+		} else {
+			player.ledgeGrab = false; // Make sure player doesn't float around grabbing ledge.
 		}
 
 		//show_debug_message("In Horizontal Collision");
@@ -78,19 +82,20 @@ if (bbox_side != -1) { // Check to make sure player is in motion
     // Check to see if sides of sprite are touching any collision boxes
     if (t1 != 0) || (t2 != 0) { 
 		// For debugging
-		//t1 = tilemap_get_at_pixel(tilemapCollision, player.bbox_left, bbox_side + player.fallSpeed);
-		//t2 = tilemap_get_at_pixel(tilemapCollision, player.bbox_right, bbox_side + player.fallSpeed);
+		
+		
+		//player.yPOS -= sign(TERMINAL_VELOCITY);
 		
 		// Reset so player floats when there isn't collision
         player.hoverCount = 0;
 		
         // If falling end ease_function.
         if (player.falling) {
-
-			yPOS -= sign(TERMINAL_VELOCITY + 1);
+			player.y -= (bbox_bottom mod 32 - (bbox_bottom - player.y)) + 31;
 			
-            player.fallSpeed = 0; // Set fallspeed to 0.
+			
             player.falling = false;
+			player.fallSpeed = 0;
 
 
             // Set to null.
@@ -100,9 +105,18 @@ if (bbox_side != -1) { // Check to make sure player is in motion
 
         // Else initialize ease_function for falling.
         } else {
-			yPOS += 10; // Push player down 10
+			player.yPOS -= (bbox_bottom mod 32 - (bbox_bottom - player.y)) - 20; // Push player down 10
 			
-            scr_initiateFall();
+			
+			// Allow player to continue to float if they are at the top of the level hitting their head.
+			player.ledgeGrab = false; // Make sure player doesn't float around grabbing ledge.
+			player.falling = false;
+			player.fallSpeed = 0;
+			
+			// Set to null.
+            verticalChange = -1;
+            verticalTime = -1; 
+            verticalStart = -1; 
         }
     } 
 }	
