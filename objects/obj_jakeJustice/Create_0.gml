@@ -3,8 +3,7 @@
 *********************/
 
 // Player location
-INITIAL_X = self.x;
-INITIAL_Y = self.y;
+
 
 yPOS = self.y; 
 
@@ -18,7 +17,7 @@ falling = false;
 
 
 // Movement variables
-INITIAL_JUMP= 2; // Makes jump more springy 
+INITIAL_JUMP = 2; // Makes jump more springy 
 
 walkspeed = 0;
 horizontalSpeed = 0; // Horizontal speed

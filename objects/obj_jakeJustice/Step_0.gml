@@ -9,11 +9,7 @@ key_jump = keyboard_check_pressed(vk_space); // Jump when Space Bar is pressed.
 key_reset = keyboard_check_pressed(ord("R")); // Reset position when R is pressed
 
 
-// RESET LOCATION (for testing purposes)
-if (key_reset) {
-	self.x = INITIAL_X;
-	self.y = INITIAL_Y;
-}
+
 
 /*********************
 ****** Movement ******
@@ -122,3 +118,7 @@ if (falling) {
 self.x += horizontalSpeed; // Move player left or right depending on + or - horizontalSpeed.
 self.y = yPOS; // Move player up or down based on yPOS.
 
+// RESET LOCATION (for testing purposes)
+if (key_reset) {
+	game_restart();
+}
