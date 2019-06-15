@@ -33,7 +33,6 @@ if (bbox_side != -1) { // Check to make sure player is in motion
 
     // Check to see if sides of sprite are touching any collision boxes
     if (t1 != 0) || (t2 != 0) { 
-			player.hoverCount = 0;
 		
 		// Push away from wall only if player is not stuck in Y-Axis
 		if (t3 = 0 || t4 = 0) {
@@ -57,7 +56,7 @@ if (bbox_side != -1) { // Check to make sure player is in motion
 			// Set to null.
 			player.verticalChange = -1;
 			player.verticalTime = -1; 
-			player.verticalStart = -1; 
+			player.verticalStart = -1;
 		} else {
 			player.ledgeGrab = false; // Make sure player doesn't float around grabbing ledge.
 		}
@@ -92,7 +91,6 @@ if (bbox_side != -1) { // Check to make sure player is in motion
         // If falling end ease_function.
         if (player.falling) {
 			player.hoverCount = 0;
-			
 			// Push player up if they are falling into the ground.
 			player.y -= (player.bbox_bottom mod player.HEIGHT - (player.bbox_bottom - player.y)) + player.HEIGHT; 
 			

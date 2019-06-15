@@ -1,4 +1,4 @@
-/// ease_OutExpo(time,start,change,duration)
+///@ ease_OutExpo(time,start,change,duration)
 
 /*********************
 ***** Variables ******

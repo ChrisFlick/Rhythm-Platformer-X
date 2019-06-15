@@ -21,6 +21,8 @@ if place_meeting(self.x, self.y, obj_player) {
 	obj_player.critical += 1;
 	
 	// +5 floats above players head to indicate they got a power up.
+	instance_create_layer(self.x, self.y, "Instances", obj_plusFive);
+	
 	obj_clap.claps++;
 	
 	HitStop(100);

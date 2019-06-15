@@ -6,6 +6,10 @@
 key_left = keyboard_check(ord("A")); // Move left as A is held.
 key_right = keyboard_check(ord("D")); // Move right as D is held.
 key_jump = keyboard_check_pressed(vk_space); // Jump when Space Bar is pressed.
+key_shoot_right = keyboard_check_pressed(vk_right); // Shoot to the right
+key_shoot_left = keyboard_check_pressed(vk_left); // Shoot to the left
+key_shoot_up = keyboard_check_pressed(vk_up); // Shoot to the left
+key_shoot_down = keyboard_check_pressed(vk_down); // Shoot to the left
 key_reset = keyboard_check_pressed(ord("R")); // Reset position when R is pressed
 
 
@@ -118,6 +122,17 @@ if (falling) {
 
 self.x += horizontalSpeed; // Move player left or right depending on + or - horizontalSpeed.
 self.y = yPOS; // Move player up or down based on yPOS.
+
+/*********************
+****** Shooting ******
+*********************/
+
+if (key_shoot_right) {
+	instance_create_layer(self.x + 10, self.y, "Instances", obj_laser);
+} else if (key_shoot_left) {
+	var laser = instance_create_layer(self.x - 60, self.y, "Instances", obj_laser);
+	laser.lasDirection = -1;
+}
 
 // RESET LOCATION (for testing purposes)
 if (key_reset) {
