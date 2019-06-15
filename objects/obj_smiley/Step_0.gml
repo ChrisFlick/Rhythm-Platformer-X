@@ -2,13 +2,13 @@
 // You can write your code in this editor
 
 
-/*if (time == DURATION) {
+if (time == DURATION) {
 	time = 0;
 	easeDirection = easeDirection * -1;
 	start = self.y;
 } else {
-	self.y += ease_InOutQuad(time++, start, (CHANGE * easeDirection), DURATION);
-}*/
+	self.y = ease_InOutQuad(time++, start, (CHANGE * easeDirection), DURATION);
+}
 
 
 // Increase the players stats when they grab the power up.

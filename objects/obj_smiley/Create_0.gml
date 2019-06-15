@@ -6,9 +6,9 @@
 *********************/
 
 // Easing variables
-CHANGE = 1;
-DURATION = 10;
+CHANGE = 4;
+DURATION = 50;
 
-time = 0;
+time = floor(random(1) * DURATION);
 start = self.y
 easeDirection = -1;

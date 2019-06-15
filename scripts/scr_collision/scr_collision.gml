@@ -112,7 +112,7 @@ if (bbox_side != -1) { // Check to make sure player is in motion
         // Else initialize ease_function for falling.
         } else {
 			// Push player down if they collide with the roof
-			player.yPOS -= (bbox_bottom mod 32 - (bbox_bottom - player.y)) - 20; // Here be dragons.
+			player.yPOS -= (bbox_bottom mod 32 - (bbox_bottom - player.y)) - 25; // Here be dragons.
 			
 			
 			// Allow player to continue to float if they are at the top of the level hitting their head.

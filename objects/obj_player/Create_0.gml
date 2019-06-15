@@ -5,7 +5,7 @@
 // Damage
 damage = 5;
 critChance = .15;
-critical = 1; // Extra bullets shot while critting.
+critical = 2; // Extra bullets shot while critting.
 
 // Player location
 yPOS = self.y; 
