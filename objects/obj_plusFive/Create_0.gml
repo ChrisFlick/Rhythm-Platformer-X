@@ -4,8 +4,6 @@
 ***** Initialize *****
 *********************/
 draw_self();
-self.x = obj_player.x;
-self.y = obj_player.y - 5;
 
 
 /*********************
@@ -13,12 +11,12 @@ self.y = obj_player.y - 5;
 *********************/
 
 // For easing.
-DURATION = 5;
+DURATION = 50;
 
 time = 0;
 
 // Y axis.
-CHANGE_Y = -1;
+CHANGE_Y = 1;
 START_Y = self.y;
 
 // Alpha.

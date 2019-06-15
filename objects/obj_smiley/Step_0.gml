@@ -19,7 +19,7 @@ if place_meeting(self.x, self.y, obj_player) {
 	obj_player.critical += 1;
 	
 	// +5 floats above players head to indicate they got a power up.
-	//instance_create(obj_player.x, obj_player.y - 5, obj_plusFive);
+	instance_create_layer(obj_player.x, obj_player.y, "Instances", obj_plusFive);
 	
 	
 	instance_destroy();
