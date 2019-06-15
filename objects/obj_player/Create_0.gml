@@ -52,5 +52,9 @@ verticalStart = -1; // Starting position.
 
 
 // Tilemaps
-tilemapCollision = layer_tilemap_get_id("Collision");
-tilemapLedge = layer_tilemap_get_id("Ledge");
+global.tilemapCollision = layer_tilemap_get_id("Collision");
+global.tilemapLedge = layer_tilemap_get_id("Ledge");
+global.tilemapHover = layer_tilemap_get_id("Hover");
+
+// Music
+audio_play_sound(sound_backgroundOne, 1, true);

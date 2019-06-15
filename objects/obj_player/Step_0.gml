@@ -75,6 +75,7 @@ if (ledgeGrab) {
 
 // If ease_Function is not being used and jump is pressed start ease_function for jump.
 if (key_jump && verticalTime == -1) {
+	audio_play_sound(sound_jump, 10, false);
 	self.y -= INITIAL_JUMP;
 
 	// Ensure player can jump when pressing a directrion

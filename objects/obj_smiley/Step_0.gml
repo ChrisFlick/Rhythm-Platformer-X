@@ -13,6 +13,8 @@ if (time == DURATION) {
 
 // Increase the players stats when they grab the power up.
 if place_meeting(self.x, self.y, obj_player) {
+	audio_play_sound(sound_smiley, 10, false);
+	
 	obj_player.hover += 5;
 	obj_player.damage += 5;
 	obj_player.critChance += 0.5;
