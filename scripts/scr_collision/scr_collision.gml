@@ -34,9 +34,9 @@ if (bbox_side != -1) { // Check to make sure player is in motion
     if (t1 != 0) || (t2 != 0) { 
 		player.hoverCount = 0;
 		
-		/*player.x -= sign(MAX_WALKSPEED) * player.movement; // Push player away from wall.
+		//player.x -= sign(MAX_WALKSPEED) * player.movement; // Push player away from wall.
 		
-		if (t3 != 0) || (t4 != 0) {
+		/*if (t3 != 0) || (t4 != 0) {
 			player.y -= (bbox_bottom mod 32 - (bbox_bottom - player.y)) + 31;
 		}*/
 		player.y -= sign(TERMINAL_VELOCITY);
@@ -97,7 +97,7 @@ if (bbox_side != -1) { // Check to make sure player is in motion
         // If falling end ease_function.
         if (player.falling) {
 			// Push player up if they are falling into the ground.
-			player.y -= (bbox_bottom mod 32 - (bbox_bottom - player.y)) + 32; // Here be dragons.
+			player.y -= (player.bbox_bottom mod player.HEIGHT - (player.bbox_bottom - player.y)) + player.HEIGHT; 
 			
 			
             player.falling = false;
@@ -112,7 +112,7 @@ if (bbox_side != -1) { // Check to make sure player is in motion
         // Else initialize ease_function for falling.
         } else {
 			// Push player down if they collide with the roof
-			player.yPOS -= (bbox_bottom mod 32 - (bbox_bottom - player.y)) - 25; // Here be dragons.
+			player.yPOS -= (bbox_bottom mod 32 - (bbox_bottom - player.y)) - 25;
 			
 			
 			// Allow player to continue to float if they are at the top of the level hitting their head.

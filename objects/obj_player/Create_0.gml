@@ -1,6 +1,8 @@
 /*********************
 ***** Variables ******
 *********************/
+HEIGHT = self.sprite_height;
+
 
 // Damage
 damage = 5;
