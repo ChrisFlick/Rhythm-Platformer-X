@@ -127,12 +127,12 @@ self.y = yPOS; // Move player up or down based on yPOS.
 ****** Shooting ******
 *********************/
 
-if (key_shoot_right) {
+/*if (key_shoot_right) {
 	instance_create_layer(self.x + 10, self.y, "Instances", obj_laser);
 } else if (key_shoot_left) {
 	var laser = instance_create_layer(self.x - 60, self.y, "Instances", obj_laser);
 	laser.lasDirection = -1;
-}
+} */
 
 // RESET LOCATION (for testing purposes)
 if (key_reset) {

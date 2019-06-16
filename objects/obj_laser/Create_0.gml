@@ -4,6 +4,7 @@
 ***** Initialize *****
 *********************/
 draw_self();
+audio_play_sound(sound_laser, 10, false);
 
 
 /*********************

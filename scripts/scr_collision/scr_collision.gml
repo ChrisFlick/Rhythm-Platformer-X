@@ -108,25 +108,9 @@ if (bbox_side != -1) { // Check to make sure player is in motion
         } else {
 			// Push player down if they collide with the roof
 			player.yPOS -= (bbox_bottom mod 32 - (bbox_bottom - player.y)) - 30;
-			
-			
-			// Check to see if player is jumping into a hover tileset and reset hoverCount if they are
-			t3 = tilemap_get_at_pixel(global.tilemapHover, player.bbox_left, player.bbox_top + TERMINAL_VELOCITY);
-			t4 = tilemap_get_at_pixel(global.tilemapHover, player.bbox_right, player.bbox_top + TERMINAL_VELOCITY);
-		
-			if (t3 != 0 || t4 != 0) {
-				player.ledgeGrab = false;
-				player.hoverCount = 0;
-			} else {
-				player.ledgeGrab = false; // Make sure player doesn't float around grabbing ledge.
-				player.falling = false;
-				player.fallSpeed = 0;
-			
-				// Set to null.
-				verticalChange = -1;
-				verticalTime = -1; 
-				verticalStart = -1; 
-			}
+			player.ledgeGrab = false;
+				
+			scr_initiateFall();
         }
     } 
 }	
