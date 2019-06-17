@@ -33,6 +33,7 @@ movement = key_right - key_left;
 
 if (movement != 0 && !ledgeGrab) {
 
+	self.y -= 2; // Fixes a bug where player gets stuck in geometry.
 	
     // Change sprite to running + direction.
     if (verticalTime = -1) {
