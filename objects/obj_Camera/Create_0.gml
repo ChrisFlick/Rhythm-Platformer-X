@@ -5,7 +5,7 @@
 *********************/
 
 camera = view_camera[0];
-follow = obj_player;
+follow = obj_Player;
 buffer = 32;
 
 view_w_half = camera_get_view_width(camera) * 0.5;

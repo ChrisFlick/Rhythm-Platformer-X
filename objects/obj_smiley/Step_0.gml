@@ -12,7 +12,7 @@ if (time == DURATION) {
 
 
 // Increase the players stats when they grab the power up.
-if place_meeting(self.x, self.y, obj_player) {
+if place_meeting(self.x, self.y, obj_Player) {
 	audio_play_sound(sound_smiley, 10, false);
 	
 	// +5 floats above players head to indicate they got a power up.
