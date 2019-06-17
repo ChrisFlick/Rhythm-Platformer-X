@@ -19,6 +19,7 @@ if place_meeting(self.x, self.y, obj_player) {
 	instance_create_layer(self.x, self.y, "Instances", obj_plusFive);
 	
 	HitStop(100);
+	feel_ScreenShake(10,10);
 	
 	instance_destroy();
 }
