@@ -5,17 +5,20 @@ if (instance_exists(follow))
 {
 	xTo = follow.x;
 	yTo = follow.y;
-	
-	/*if ((follow).object_index == obj_playerDead)
-	{
-		x = xTo;
-		y = yTo;
-	}*/
+}
+
+if (self.x != xTo && self.y != yTo) {
+	cameraSpeed = ease_InCirc(time, START_SPEED, SPEED_CHANGE, DURATION);
+	if (time < DURATION) {
+		time++;
+	}
+} else {
+	time = 0;
 }
 
 //Update object position
-self.x += (xTo - self.x) / 15;
-self.y += (yTo - self.y) / 15;
+self.x += (xTo - self.x) / cameraSpeed;
+self.y += (yTo - self.y) / cameraSpeed;
 
 //Keep camera center inside room
 self.x = clamp(self.x,view_w_half + buffer, room_width - view_w_half - buffer);

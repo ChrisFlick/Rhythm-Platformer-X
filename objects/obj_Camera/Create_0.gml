@@ -17,3 +17,11 @@ yTo = self.ystart;
 shake_length = 0;
 shake_magnitude = 0;
 shake_remain = 0;
+
+// Camera movement
+START_SPEED = 30;
+SPEED_CHANGE = 15 - START_SPEED; // Lower number is faster
+DURATION = 10;
+
+time = 0;
+cameraSpeed = START_SPEED;

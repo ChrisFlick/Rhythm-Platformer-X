@@ -599,6 +599,14 @@
             }
         },
         {
+            "Key": "f32b23f2-319b-4fe6-94e2-a638da55bba4",
+            "Value": {
+                "id": "934432ae-0f10-4d50-9cbf-6b1ab6428211",
+                "resourcePath": "scripts\\ease_InCirc\\ease_InCirc.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "8fb1412f-9a73-4983-b628-c90fdd7ff80b",
@@ -624,6 +632,7 @@
         "ee0db4b5-4241-40a8-b180-fa9cac0f419e",
         "9f83aa69-5494-4719-9a44-6cd02ef6c65e",
         "553b987f-6176-4266-b90d-72d129fd643f",
+        "f32b23f2-319b-4fe6-94e2-a638da55bba4",
         "bb3d2dde-fc61-4039-869e-33e9cf9e7df1",
         "8ad0a601-6b39-4f08-89de-e38b1590c129"
     ],
