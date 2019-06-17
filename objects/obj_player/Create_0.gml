@@ -3,19 +3,13 @@
 *********************/
 HEIGHT = self.sprite_height;
 
-
-// Damage
-damage = 5;
-critChance = .15;
-critical = 2; // Extra bullets shot while critting.
-
 // Player location
 yPOS = self.y; 
 
 
 
 // Falling
-hover = 15;
+hover = 10;
 hoverCount = 0;
 fallSpeed = 0;
 falling = false;

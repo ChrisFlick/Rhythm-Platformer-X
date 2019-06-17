@@ -15,14 +15,8 @@ if (time == DURATION) {
 if place_meeting(self.x, self.y, obj_player) {
 	audio_play_sound(sound_smiley, 10, false);
 	
-	obj_player.damage += 5;
-	obj_player.critChance += 0.5;
-	obj_player.critical += 1;
-	
 	// +5 floats above players head to indicate they got a power up.
 	instance_create_layer(self.x, self.y, "Instances", obj_plusFive);
-	
-	obj_clap.claps++;
 	
 	HitStop(100);
 	
