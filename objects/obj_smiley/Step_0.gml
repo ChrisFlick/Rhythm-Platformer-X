@@ -15,6 +15,8 @@ if (time == DURATION) {
 if place_meeting(self.x, self.y, obj_Player) {
 	audio_play_sound(sound_smiley, 10, false);
 	
+	score += 5;
+	
 	// +5 floats above players head to indicate they got a power up.
 	instance_create_layer(self.x, self.y, "Instances", obj_plusFive);
 	

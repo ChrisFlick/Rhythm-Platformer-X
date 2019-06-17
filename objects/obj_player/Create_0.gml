@@ -1,6 +1,8 @@
 /*********************
 ***** Variables ******
 *********************/
+score = 0;
+
 HEIGHT = self.sprite_height;
 
 // Player location
