@@ -20,7 +20,7 @@ if place_meeting(self.x, self.y, obj_Player) {
 	// +5 floats above players head to indicate they got a power up.
 	instance_create_layer(self.x, self.y, "Instances", obj_plusFive);
 	
-	HitStop(80);
+	HitStop(75);
 	feel_ScreenShake(10,10);
 	
 	instance_destroy();
