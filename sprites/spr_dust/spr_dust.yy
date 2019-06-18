@@ -2,7 +2,7 @@
     "id": "d9570fe0-2de6-480f-9dad-f60957bd6433",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sDust",
+    "name": "spr_dust",
     "For3D": false,
     "HTile": false,
     "VTile": false,

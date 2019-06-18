@@ -32,15 +32,12 @@ movement = key_right - key_left;
 
 
 if (movement != 0 && !ledgeGrab) {
-	repeat(1)
+	with (instance_create_layer(x,bbox_bottom,"Bullets",obj_dust))
 	{
-		with (instance_create_layer(x,bbox_bottom,"Bullets",obj_dust))
-		{
-			verticalSpeed = 0;
-		}
+		verticalSpeed = 0;
 	}
 
-	self.y -= 2; // Fixes a bug where player gets stuck in geometry.
+	self.y -= 3; // Fixes a bug where player gets stuck in geometry.
 	
     // Change sprite to running + direction.
     if (verticalTime = -1) {
