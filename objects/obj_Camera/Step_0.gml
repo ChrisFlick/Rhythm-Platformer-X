@@ -33,15 +33,30 @@ shake_remain = max(0,shake_remain-((1 / shake_length) * shake_magnitude));
 //Update camera view
 camera_set_view_pos(camera,self.x - view_w_half, self.y - view_h_half);
 
-/*if (self.room != rMenu) && (self.room != rEnding)
+if (room != rm_menu) && (room != rm_credits)
 {
-	if (layer_exists("Mountains"))
+	if (layer_exists("Background_1"))
 	{
-		layer_x("Mountains",x/2);
+		layer_x("Background_1", x / 8);
 	}
 
-	if (layer_exists("Trees"))
+	if (layer_exists("Background_2"))
 	{
-		layer_x("Trees",x/4);
+		layer_x("Background_2", x / 7);
 	}
-}*
+	
+	if (layer_exists("Background_3"))
+	{
+		layer_x("Background_3", x / 6);
+	}
+	
+	if (layer_exists("Background_4"))
+	{
+		layer_x("Background_4", x / 5);
+	}
+	
+	if (layer_exists("Background_5"))
+	{
+		layer_x("Background_5", x / 4);
+	}
+}
