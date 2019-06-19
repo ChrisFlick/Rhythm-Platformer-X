@@ -15,7 +15,5 @@ var vy = 60;
 draw_set_font(font_menu);
 draw_set_color(c_white);
 
-var 
-
 draw_text(vx, vy, "TIME " + string(global.time));
 draw_text(vx + 200, vy, "SCORE " + string(score));
