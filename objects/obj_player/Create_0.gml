@@ -2,6 +2,9 @@
 ***** Variables ******
 *********************/
 
+key_left = false;
+key_right = false;
+key_jump = false;
 
 HEIGHT = self.sprite_height;
 

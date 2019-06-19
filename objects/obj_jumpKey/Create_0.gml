@@ -1,4 +1,7 @@
 event_inherited();
 
-self.x += 300;
-self.y += 50;
+xx += 300;
+yy += 50;
+
+self.x = xx;
+self.y = yy;

@@ -3,12 +3,12 @@
 *********************/
 
 // Player Input.
-//if (!global.mobile) { 
+if (!global.mobile) { 
 	key_left = keyboard_check(vk_left); // Move left as A is held.
 	key_right = keyboard_check(vk_right); // Move right as D is held.
 	key_jump = keyboard_check_pressed(vk_space); // Jump when Space Bar is pressed.
 	key_reset = keyboard_check_pressed(ord("R")); // Reset position when R is pressed
-//}
+}
 
 
 
@@ -137,7 +137,11 @@ self.y = yPOS; // Move player up or down based on yPOS.
 	laser.lasDirection = -1;
 } */
 
-// RESET LOCATION (for testing purposes)
-if (key_reset) {
-	game_restart();
+
+if (global.mobile) {
+	key_left = false;
+	key_right = false;
+	key_jump = false;
+} else if (key_reset) {
+	game_restart(); // RESET LOCATION (for testing purposes)
 }
