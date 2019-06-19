@@ -3,10 +3,12 @@
 *********************/
 
 // Player Input.
-key_left = keyboard_check(vk_left); // Move left as A is held.
-key_right = keyboard_check(vk_right); // Move right as D is held.
-key_jump = keyboard_check_pressed(vk_space); // Jump when Space Bar is pressed.
-key_reset = keyboard_check_pressed(ord("R")); // Reset position when R is pressed
+//if (!global.mobile) { 
+	key_left = keyboard_check(vk_left); // Move left as A is held.
+	key_right = keyboard_check(vk_right); // Move right as D is held.
+	key_jump = keyboard_check_pressed(vk_space); // Jump when Space Bar is pressed.
+	key_reset = keyboard_check_pressed(ord("R")); // Reset position when R is pressed
+//}
 
 
 
