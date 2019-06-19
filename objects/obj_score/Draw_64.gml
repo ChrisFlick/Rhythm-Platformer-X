@@ -1,10 +1,21 @@
 /// @desc Draw Score
 
+/*********************
+***** Variables ******
+*********************/
+
+var vx = 600;
+var vy = 60;
+
+/*********************
+******* Draw *********
+******* Score ********
+*********************/
+
 draw_set_font(font_menu);
-draw_set_halign(fa_right);
-draw_set_valign(fa_bottom);
+draw_set_color(c_white);
 
+var 
 
-var vx = camera_get_view_x(view_camera[0]);
-var vy = camera_get_view_y(view_camera[0]);
-draw_text(vx + 5, vy + 5, "SCORE" + string(score));
+draw_text(vx, vy, "TIME " + string(global.time));
+draw_text(vx + 200, vy, "SCORE " + string(score));

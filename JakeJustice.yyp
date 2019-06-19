@@ -727,14 +727,6 @@
             }
         },
         {
-            "Key": "f5143095-f24e-4819-a4e7-765006ff6d37",
-            "Value": {
-                "id": "0d0ef633-c96b-4daa-bcdf-d2ad3025072c",
-                "resourcePath": "objects\\obj_scroller\\obj_scroller.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "f8b07c64-bf7c-4fb6-b87b-912b2a885a83",
             "Value": {
                 "id": "29ade3ed-67e8-4831-86f9-509f36c43563",
