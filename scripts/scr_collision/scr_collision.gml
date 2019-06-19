@@ -92,7 +92,7 @@ if (bbox_side != -1) { // Check to make sure player is in motion
         if (player.falling) {
 			player.hoverCount = 0;
 			// Push player up if they are falling into the ground.
-			player.y -= player.HEIGHT * 2; //(player.bbox_bottom mod player.HEIGHT - (player.bbox_bottom - player.y)) - player.HEIGHT; 
+			player.y -= player.HEIGHT + TERMINAL_VELOCITY; //(player.bbox_bottom mod player.HEIGHT - (player.bbox_bottom - player.y)) - player.HEIGHT; 
 			
 			
             player.falling = false;
